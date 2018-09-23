@@ -3,6 +3,7 @@
 
 **Please refer to [the jupyter notebook file](https://github.com/terryum/tf.data-for-keras-and-tensorflow-estimator/blob/master/0-TFData-For-Keras-Estimator.ipynb) for details.**
 
+<br>
 
 ## Motivation
 The official [Tensorflow guide](https://www.tensorflow.org/guide/keras#input_tfdata_datasets) says that tf.data.Dataset can be directly fed into model.fit in Keras since TF 1.09. However, it is an absolute lie at the moment of TF 1.10, Sept 2018, as you can see from the following images. 
@@ -13,6 +14,8 @@ The official [Tensorflow guide](https://www.tensorflow.org/guide/keras#input_tfd
 I have spent three days to figure out what the problem is, but it turns out that **IT IS JUST NOT WORKING**. Instead, it is working with **TF-Nightly** (TF 1.12-dev at this moment) rather than TF 1.10, as discussed [here](https://github.com/tensorflow/tensorflow/issues/21894) and [here](https://medium.com/tensorflow/training-and-serving-ml-models-with-tf-keras-fd975cc0fa27). 
 
 For those who may suffer from the similar problems that I had, I made [this tutorial code](([https://github.com/terryum/tf.data-for-keras-and-tensorflow-estimator/blob/master/0-TFData-For-Keras-Estimator.ipynb])) to show how you can incorporate tf.data into your Keras model. 
+
+<br>
 
 ## Contents
 
@@ -38,6 +41,8 @@ This code first shows how tf.data can be naturally incorporated into a pre-made 
 
 #### 4. Use a custom estimator created by using Keras
 You may want to build a custom model using Keras and train it using your large-scale data. One of the easiest ways to do it is (i) to write a TF record file, (ii) make a tf.data.Dataset from it, (iii) buile a model using Keras, (iv) convert the model to an estimator using `model_to_estimator`, (v) train the model like the previous example.
+
+<br>
 
 ## Thanks
 I hope this tutorial could save your time. Feel free to use or change this code for your own purpose. If you are intereted in deep learning research, you can follow me on [twitter](https://twitter.com/TerryUm_ML) and have interesting discussions. 
