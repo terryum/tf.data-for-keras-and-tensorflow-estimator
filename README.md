@@ -1,7 +1,7 @@
 # tf.data examples for keras and estimator models
 
 
-Please refer to [the jupyter notebook file]([https://github.com/terryum/tf.data-for-keras-and-tensorflow-estimator/blob/master/0-TFData-For-Keras-Estimator.ipynb]) for details.
+**Please refer to [the jupyter notebook file](https://github.com/terryum/tf.data-for-keras-and-tensorflow-estimator/blob/master/0-TFData-For-Keras-Estimator.ipynb) for details.**
 
 
 ## Motivation
