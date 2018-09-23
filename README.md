@@ -13,7 +13,7 @@ The official [Tensorflow guide](https://www.tensorflow.org/guide/keras#input_tfd
 
 I have spent three days to figure out what the problem is, but it turns out that **IT IS JUST NOT WORKING**. Instead, it is working with **TF-Nightly** (TF 1.12-dev at this moment) rather than TF 1.10, as discussed [here](https://github.com/tensorflow/tensorflow/issues/21894) and [here](https://medium.com/tensorflow/training-and-serving-ml-models-with-tf-keras-fd975cc0fa27). 
 
-For those who may suffer from the similar problems that I had, I made [this tutorial code](([https://github.com/terryum/tf.data-for-keras-and-tensorflow-estimator/blob/master/0-TFData-For-Keras-Estimator.ipynb])) to show how you can incorporate tf.data into your Keras model. 
+For those who may suffer from the similar problems that I had, I made [this tutorial code](https://github.com/terryum/tf.data-for-keras-and-tensorflow-estimator/blob/master/0-TFData-For-Keras-Estimator.ipynb) to show how you can incorporate tf.data into your Keras model. 
 
 <br>
 
@@ -21,7 +21,7 @@ For those who may suffer from the similar problems that I had, I made [this tuto
 
 **[IMPORTANT] You should first install `tf-nightly` or `tf-nightly-gpu` via `pip install tf-nightly` or `pip install tf-nightly-gpu` if you have intalled a tensorflow under 1.11 version  
 
-* This code consists of four parts as followings: 
+* [This code](https://github.com/terryum/tf.data-for-keras-and-tensorflow-estimator/blob/master/0-TFData-For-Keras-Estimator.ipynb) consists of four parts as followings: 
 
 #### 0. Data & Model preparation
 Load MNIST dataset and build a simple 2-layer MLP model (784-40-40-10) using Keras.
