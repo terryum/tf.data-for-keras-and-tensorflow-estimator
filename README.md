@@ -1,7 +1,7 @@
 # tf.data examples for keras and estimator models
 
 
-**Please refer to [the jupyter notebook file](https://github.com/terryum/tf.data-for-keras-and-tensorflow-estimator/blob/master/0-TFData-For-Keras-Estimator.ipynb) for details.**
+**Please refer to [the jupyter notebook file](https://github.com/terryum/tf.data-for-keras-and-tensorflow-estimator/blob/master/0-TFData-For-Keras-Estimator-gcloud.ipynb) for details.**
 
 <br>
 
@@ -13,7 +13,7 @@ The official [Tensorflow guide](https://www.tensorflow.org/guide/keras#input_tfd
 
 I have spent three days to figure out what the problem is, but it turns out that **IT IS JUST NOT WORKING**. Instead, it is working with **TF-Nightly** (TF 1.12-dev at this moment) rather than TF 1.10, as discussed [here](https://github.com/tensorflow/tensorflow/issues/21894) and [here](https://medium.com/tensorflow/training-and-serving-ml-models-with-tf-keras-fd975cc0fa27). 
 
-For those who may suffer from the similar problems that I had, I made [this tutorial code](https://github.com/terryum/tf.data-for-keras-and-tensorflow-estimator/blob/master/0-TFData-For-Keras-Estimator.ipynb) to show how you can incorporate tf.data into your Keras model. 
+For those who may suffer from the similar problems that I had, I made [this tutorial code](https://github.com/terryum/tf.data-for-keras-and-tensorflow-estimator/blob/master/0-TFData-For-Keras-Estimator-gcloud.ipynb) to show how you can incorporate tf.data into your Keras model. 
 
 <br>
 
@@ -21,7 +21,7 @@ For those who may suffer from the similar problems that I had, I made [this tuto
 
 **[IMPORTANT] You should first install `tf-nightly` or `tf-nightly-gpu` via `pip install tf-nightly` or `pip install tf-nightly-gpu` if you have intalled a tensorflow under 1.11 version  
 
-* [This code](https://github.com/terryum/tf.data-for-keras-and-tensorflow-estimator/blob/master/0-TFData-For-Keras-Estimator.ipynb) consists of four parts as followings: 
+* [This code](https://github.com/terryum/tf.data-for-keras-and-tensorflow-estimator/blob/master/0-TFData-For-Keras-Estimator-gcloud.ipynb) consists of four parts as followings: 
 
 #### 0. Data & Model preparation
 Load MNIST dataset and build a simple 2-layer MLP model (784-40-40-10) using Keras.
@@ -41,6 +41,9 @@ This code first shows how tf.data can be naturally incorporated into a pre-made 
 
 #### 4. Use a custom estimator created by using Keras
 You may want to build a custom model using Keras and train it using your large-scale data. One of the easiest ways to do it is (i) to write a TF record file, (ii) make a tf.data.Dataset from it, (iii) buile a model using Keras, (iv) convert the model to an estimator using `model_to_estimator`, (v) train the model like the previous example.
+
+#### 5. Access the data on google cloud
+This code explain how to upload your data from local to a google storage (bucket), get the list of files on the bucket, and train the model using the data on the bucket.
 
 <br>
 
